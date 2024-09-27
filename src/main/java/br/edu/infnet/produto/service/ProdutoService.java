@@ -21,6 +21,10 @@ public class ProdutoService {
         return produtoRepository.findByNome(nome);
     }
 
+    public Mono<Produto> buscarPorId(Long id) {
+        return produtoRepository.findById(id);
+    }
+
     public Mono<Produto> adicionarProduto(Produto produto) {
         return produtoRepository.save(produto);
     }

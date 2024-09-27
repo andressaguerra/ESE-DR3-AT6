@@ -15,6 +15,10 @@ public class ProdutoController {
     @Autowired
     private ProdutoService produtoService;
 
+    public ProdutoController(ProdutoService produtoService) {
+        this.produtoService = new ProdutoService();
+    }
+
     @GetMapping
     public Flux<Produto> listarProdutos() {
         return produtoService.listarTodos();

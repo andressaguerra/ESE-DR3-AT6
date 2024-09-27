@@ -1,8 +1,10 @@
 package br.edu.infnet.produto.model;
 
+import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
+@Data
 @Table("produtos")
 public class Produto {
 
@@ -10,6 +12,9 @@ public class Produto {
     private Long id;
     private String nome;
     private double preco;
+
+    public Produto(long l, String coca, double v) {
+    }
 
     public Long getId() {
         return id;
