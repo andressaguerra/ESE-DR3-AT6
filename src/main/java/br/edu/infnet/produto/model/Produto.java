@@ -8,6 +8,8 @@ import org.springframework.data.relational.core.mapping.Table;
 @Table("produtos")
 public class Produto {
 
+    // Teste para nova branch
+
     @Id
     private Long id;
     private String nome;
